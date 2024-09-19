@@ -69,4 +69,4 @@ If you'd like to collaborate or have any inquiries, feel free to reach out!
    - 📧 Email: [vinaycp50@gmail.com]
    - 💼 LinkedIn: https://www.linkedin.com/in/vinay-patil-devops-engineering/
 
-## Thanks for visiting my portfolio!
+## 🙏 Thanks for Visiting!
