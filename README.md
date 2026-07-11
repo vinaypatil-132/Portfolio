@@ -1,4 +1,4 @@
-# <a href="https://vinodjangid07.github.io/" target="_blank">🌐 Vinay Patil | Portfolio</a>
+# <a href="https://vinaypatil-132.github.io/Portfolio/" target="_blank">🌐 Vinay Patil | Portfolio</a>
 Welcome to my portfolio! This repository contains the source code for my personal portfolio website, which showcases my work as a **web developer**, **digital visual artist**, and **certified ethical hacker**.
 
 🔗 **Live Demo:**  
