@@ -1,0 +1,19 @@
+# Antigravity internal folders
+.agents/
+.planning/
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# VS Code
+.vscode/
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
