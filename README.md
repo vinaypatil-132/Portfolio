@@ -1,5 +1,5 @@
 # <a href="https://vinaypatil-132.github.io/Portfolio/" target="_blank">🌐 Vinay Patil | Portfolio</a>
-Welcome to my portfolio! This repository contains the source code for my personal portfolio website, which showcases my work as a **web developer**, **digital visual artist**, and **certified ethical hacker**.
+Welcome to my portfolio! This repository contains the source code for my personal portfolio website, which showcases my work as a **DevOps Engineer** specializing in cloud infrastructure, automation, and secure deployments.
 
 🔗 **Live Demo:**  
 👉 [Vinay Patil Portfolio](https://vinaypatil-132.github.io/Portfolio/)
@@ -11,12 +11,12 @@ Welcome to my portfolio! This repository contains the source code for my persona
 
 ## 👨‍💻 About Me
 
-Hi! I'm **Vinay Patil**, a **certified ethical hacker**, **digital visual artist**, and **web developer** with a solid background in **DevOps**. I take pride in creating secure, functional, and aesthetically pleasing digital experiences, with an emphasis on:
-- **Simple content structures**
-- **Clean design patterns**
-- **Thoughtful interactions**
+Hi! I'm **Vinay Patil**, a **DevOps Engineer** specializing in cloud computing, infrastructure automation, and container orchestration. I take pride in designing secure, scalable, and highly reliable cloud systems, with an emphasis on:
+- **Simple infrastructure structures**
+- **Clean deployment patterns**
+- **Automated CI/CD interactions**
 
-My portfolio showcases my diverse projects, skills, and expertise across development, security, and design.
+My portfolio showcases my diverse projects, skills, and expertise across cloud engineering, configuration management, and automation.
 
 ## Sections 📚
 

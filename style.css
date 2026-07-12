@@ -85,7 +85,7 @@ html {
     -webkit-font-smoothing: antialiased
 }
 
-section {
+section:not(#home) {
     scroll-margin-top: 115px
 }
 
@@ -978,10 +978,16 @@ noscript {
     gap: 10px
 }
 
-.dp img,
 .dp::after,
 .dp::before {
     width: 300px
+}
+
+.dp img {
+    width: 300px;
+    height: 310px;
+    object-fit: cover;
+    object-position: center;
 }
 
 .projects-heading-article,
@@ -1962,7 +1968,8 @@ footer {
     }
 
     .dp img {
-        width: 200px
+        width: 200px;
+        height: 207px
     }
 
     .two-words {
