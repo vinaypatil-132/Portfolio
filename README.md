@@ -4,7 +4,7 @@ Welcome to my portfolio! This repository contains the source code for my persona
 🔗 **Live Demo:**  
 👉 [Vinay Patil Portfolio](https://vinaypatil-132.github.io/Portfolio/)
 
-<img width="100%" alt="Portfolio Screenshot" src="src/png/overview.png">
+<img width="100%" alt="Portfolio Screenshot" src="src/png/Overview.png">
 
 
 :star: Star me on GitHub — it helps!
