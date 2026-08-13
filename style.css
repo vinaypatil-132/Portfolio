@@ -1312,6 +1312,563 @@ footer {
     transform: scale(.95)
 }
 
+/* ==========================================
+   Project Case Study Modal & Button Styles
+   ========================================== */
+
+.project-buttons {
+    flex-wrap: wrap;
+}
+
+.cta-case-study::before {
+    background: #23223c;
+    border: 1px solid rgba(107, 197, 248, 0.2);
+}
+
+.cta-case-study:hover::before {
+    background: #2b2f4e;
+    border-color: var(--color-light-blue);
+}
+
+/* Modal Overlay Container */
+.case-study-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.case-study-modal.case-study-modal-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+/* Modal Backdrop */
+.case-study-backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(10, 10, 18, 0.82);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+/* Terminal Window Frame */
+.case-study-window {
+    position: relative;
+    width: 100%;
+    max-width: 840px;
+    max-height: 88vh;
+    background: linear-gradient(150deg, var(--tech-stack-box-first-color), #0d0d16);
+    border: 1px solid var(--tech-stack-box-border-color);
+    border-radius: 20px;
+    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.65), 0 0 35px -10px rgba(128, 0, 255, 0.25);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transform: translateY(25px) scale(0.97);
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    z-index: 2;
+}
+
+.case-study-modal.case-study-modal-open .case-study-window {
+    transform: translateY(0) scale(1);
+}
+
+/* Terminal Header Bar */
+.case-study-terminal-bar {
+    height: 48px;
+    background: rgba(15, 15, 26, 0.95);
+    border-bottom: 1px solid var(--tech-stack-box-border-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    flex-shrink: 0;
+}
+
+.case-study-window-controls {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.case-study-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+    border: none;
+    cursor: default;
+    padding: 0;
+}
+
+.case-study-dot.dot-close {
+    background: #ff5f56;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.case-study-dot.dot-close:hover {
+    filter: brightness(1.2);
+}
+
+.case-study-dot.dot-minimize {
+    background: #ffbd2e;
+}
+
+.case-study-dot.dot-expand {
+    background: #27c93f;
+}
+
+.case-study-terminal-prompt {
+    font-family: 'Fira Code', monospace;
+    font-size: 1.3rem;
+    color: var(--color-gray);
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 60%;
+}
+
+.cs-prompt-user {
+    color: var(--color-light-blue);
+}
+
+.cs-prompt-dir {
+    color: var(--color-light-purple);
+}
+
+.cs-prompt-cmd {
+    color: #a6e22e;
+}
+
+.case-study-close-btn {
+    background: transparent;
+    border: none;
+    color: var(--color-gray);
+    font-size: 2.4rem;
+    cursor: pointer;
+    line-height: 1;
+    padding: 0 6px;
+    transition: 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.case-study-close-btn:hover {
+    color: var(--color-white);
+    transform: scale(1.15);
+}
+
+/* Quick Project Banner */
+.case-study-banner {
+    padding: 20px 28px;
+    background: rgba(22, 22, 38, 0.4);
+    border-bottom: 1px dashed var(--tech-stack-box-border-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-shrink: 0;
+}
+
+.case-study-banner-left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.case-study-banner-icon {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+.case-study-title-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.case-study-banner-title {
+    font-family: Whitney, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    color: var(--color-white);
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.case-study-banner-tags {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cs-badge {
+    font-family: 'Fira Code', monospace;
+    font-size: 1.2rem;
+    padding: 3px 10px;
+    border-radius: 12px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 500;
+}
+
+.cs-badge-private {
+    background: rgba(207, 89, 230, 0.12);
+    border: 1px solid rgba(207, 89, 230, 0.35);
+    color: var(--color-light-purple);
+}
+
+.cs-badge-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--color-light-purple);
+    box-shadow: 0 0 6px var(--color-light-purple);
+}
+
+/* Scrollable Body */
+.case-study-body {
+    padding: 26px 30px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+}
+
+.case-study-body::-webkit-scrollbar {
+    width: 6px;
+}
+
+.case-study-body::-webkit-scrollbar-track {
+    background: rgba(10, 10, 16, 0.5);
+}
+
+.case-study-body::-webkit-scrollbar-thumb {
+    background-color: var(--color-purple);
+    border-radius: 3px;
+}
+
+/* Sections */
+.case-study-section {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.case-study-section-title {
+    font-family: 'Fira Code', monospace;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-light-blue);
+    letter-spacing: 0.5px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.case-study-text {
+    font-size: 1.6rem;
+    line-height: 1.6;
+    color: var(--color-ddd-color);
+    font-family: Whitney, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+}
+
+.case-study-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.case-study-list li {
+    font-size: 1.5rem;
+    line-height: 1.5;
+    color: var(--color-ddd-color);
+    position: relative;
+    padding-left: 22px;
+    font-family: Whitney, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+}
+
+.case-study-list li::before {
+    content: "▹";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--color-light-blue);
+    font-size: 1.6rem;
+}
+
+/* Tech Tags Grid */
+.case-study-tech-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.case-study-tech-pill {
+    font-family: 'Fira Code', monospace;
+    font-size: 1.3rem;
+    padding: 6px 14px;
+    border-radius: 8px;
+    background: rgba(26, 26, 41, 0.7);
+    border: 1px solid var(--tech-stack-box-border-color);
+    color: var(--color-light-blue);
+    transition: 0.2s;
+}
+
+.case-study-tech-pill:hover {
+    border-color: var(--color-light-blue);
+    transform: translateY(-2px);
+}
+
+/* Preview Image Frame */
+.case-study-preview-frame {
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--tech-stack-box-border-color);
+    background: #0d0d16;
+    max-height: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.case-study-preview-img {
+    width: 100%;
+    height: 100%;
+    max-height: 320px;
+    object-fit: contain;
+    display: block;
+}
+
+/* Repo Notice Box */
+.case-study-repo-box {
+    background: rgba(26, 26, 41, 0.4);
+    border: 1px solid var(--tech-stack-box-border-color);
+    border-radius: 12px;
+    padding: 16px 20px;
+}
+
+.case-study-repo-notice {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+}
+
+.case-study-lock-icon {
+    color: var(--color-light-purple);
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.case-study-repo-notice strong {
+    font-family: 'Fira Code', monospace;
+    font-size: 1.4rem;
+    color: var(--color-white);
+    display: block;
+    margin-bottom: 6px;
+}
+
+.case-study-repo-desc {
+    font-size: 1.4rem;
+    line-height: 1.5;
+    color: gray;
+    font-family: Whitney, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+}
+
+/* Terminal Footer */
+.case-study-footer {
+    height: 52px;
+    background: rgba(15, 15, 26, 0.95);
+    border-top: 1px solid var(--tech-stack-box-border-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 24px;
+    flex-shrink: 0;
+}
+
+.case-study-footer-hint {
+    font-family: 'Fira Code', monospace;
+    font-size: 1.2rem;
+    color: gray;
+}
+
+.case-study-footer-hint kbd {
+    background: #1e1e30;
+    border: 1px solid #33334d;
+    color: var(--color-light-blue);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 1.1rem;
+}
+
+.case-study-footer-btn {
+    font-family: 'Fira Code', monospace;
+    font-size: 1.3rem;
+    padding: 6px 18px;
+    border-radius: 6px;
+    background: #2b2f4e;
+    color: var(--color-light-blue);
+    border: 1px solid rgba(107, 197, 248, 0.2);
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.case-study-footer-btn:hover {
+    background: #3b426e;
+    color: var(--color-white);
+    border-color: var(--color-light-blue);
+}
+
+/* Light Mode Overrides */
+.light-mode .case-study-backdrop {
+    background: rgba(220, 215, 205, 0.82);
+}
+
+.light-mode .case-study-window {
+    background: linear-gradient(150deg, #f7f3ee, #eae5df);
+    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.2), 0 0 35px -10px rgba(128, 0, 255, 0.15);
+}
+
+.light-mode .case-study-terminal-bar,
+.light-mode .case-study-footer {
+    background: #ebe5de;
+}
+
+.light-mode .case-study-banner {
+    background: rgba(235, 229, 222, 0.5);
+}
+
+.light-mode .case-study-banner-title,
+.light-mode .case-study-repo-notice strong {
+    color: #11111b;
+}
+
+.light-mode .case-study-text,
+.light-mode .case-study-list li {
+    color: #333333;
+}
+
+.light-mode .case-study-repo-desc {
+    color: #555555;
+}
+
+.light-mode .case-study-tech-pill {
+    background: #e4ded7;
+    color: #0f7878;
+}
+
+.light-mode .case-study-repo-box {
+    background: rgba(235, 229, 222, 0.6);
+}
+
+.light-mode .case-study-preview-frame {
+    background: #ded7ce;
+}
+
+.light-mode .case-study-footer-btn {
+    background: #d8d0c5;
+    color: #0f7878;
+    border-color: #b8b0a5;
+}
+
+.light-mode .case-study-footer-btn:hover {
+    background: #c8c0b5;
+    color: #000;
+}
+
+.light-mode .case-study-footer-hint kbd {
+    background: #e4ded7;
+    border-color: #cac0b4;
+    color: #0f7878;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+    .case-study-window {
+        max-height: 92vh;
+        border-radius: 16px;
+    }
+
+    .case-study-banner,
+    .case-study-body,
+    .case-study-footer {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .case-study-banner-title {
+        font-size: 2rem;
+    }
+
+    .case-study-terminal-prompt {
+        font-size: 1.1rem;
+        max-width: 50%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .case-study-modal {
+        padding: 10px;
+    }
+
+    .case-study-window {
+        max-height: 94vh;
+        border-radius: 14px;
+    }
+
+    .case-study-banner,
+    .case-study-body,
+    .case-study-footer {
+        padding: 16px 16px;
+    }
+
+    .case-study-banner-title {
+        font-size: 1.8rem;
+    }
+
+    .case-study-terminal-prompt {
+        display: none;
+    }
+
+    .case-study-footer-hint {
+        display: none;
+    }
+
+    .case-study-footer {
+        justify-content: flex-end;
+    }
+
+    .case-study-preview-frame {
+        max-height: 220px;
+    }
+}
+
 #backtotopbutton {
     position: fixed;
     right: 10px;
