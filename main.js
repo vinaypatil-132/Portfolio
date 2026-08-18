@@ -132,6 +132,25 @@ document.querySelectorAll('a[href="#home"]').forEach(anchor => {
 // Project Case Studies Data & Modal Controller
 // ==========================================
 const PROJECT_CASE_STUDIES = {
+    bluegreen: {
+        slug: "blue-green-deployment",
+        title: "Blue-Green Deployment",
+        favicon: "src/png/main-favicon.png",
+        image: "src/webp/blue-green-deploy.png",
+        imageAlt: "Blue-Green Deployment Dashboard preview",
+        overview: "A zero-downtime deployment dashboard demonstrating a real Blue-Green deployment workflow with health checks, version tracking, PM2-managed BLUE/GREEN instances, Caddy traffic switching, GitHub Actions CI/CD, and Tailscale.",
+        capabilities: [
+            "Dynamic environment detection displaying active instance as BLUE or GREEN with theme accents and status beacons",
+            "Dedicated /health and /version endpoints exposing JSON health status, process uptime, system memory, and release metadata",
+            "Lightweight runtime telemetry tracking Node.js runtime version, OS/CPU architecture, process uptime, and memory usage breakdown",
+            "Deployment details and release notes tracking deployment ID, timestamp, commit messages, and Blue-Green strategy",
+            "Visual architecture pipeline illustrating the DevOps workflow across GitHub Actions, PM2, Caddy, and Tailscale",
+            "Optimized for lightweight execution on local machines and mobile environments (Samsung Galaxy S25 running Termux)"
+        ],
+        technologies: ["Next.js", "TypeScript", "Node.js", "GitHub Actions", "PM2", "Caddy", "Tailscale", "Termux"],
+        repoStatus: "Source Code: Public Repository",
+        repoDesc: "The source code for this project is publicly available on GitHub. The project includes health check endpoints, version tracking, PM2-managed BLUE/GREEN instances, Caddy reverse proxy routing, and automated GitHub Actions CI/CD pipelines."
+    },
     serverdeck: {
         slug: "serverdeck",
         title: "ServerDeck",
