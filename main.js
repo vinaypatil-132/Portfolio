@@ -151,6 +151,27 @@ const PROJECT_CASE_STUDIES = {
         repoStatus: "Source Code: Public Repository",
         repoDesc: "The source code for this project is publicly available on GitHub. The project includes health check endpoints, version tracking, PM2-managed BLUE/GREEN instances, Caddy reverse proxy routing, and automated GitHub Actions CI/CD pipelines."
     },
+    shopsphere: {
+        slug: "shopsphere-auto-scaling-ecommerce",
+        title: "ShopSphere — Auto-Scaling E-Commerce",
+        favicon: "src/png/main-favicon.png",
+        image: "src/webp/auto-scalling.png",
+        imageAlt: "ShopSphere Auto-Scaling E-Commerce preview",
+        overview: "A modern containerized e-commerce platform built to demonstrate practical DevOps and Kubernetes concepts, including containerization, self-healing, horizontal auto-scaling, secure configuration, service networking, and ingress routing.",
+        capabilities: [
+            "Modern full-stack e-commerce application built with Next.js, TypeScript, and PostgreSQL",
+            "Production Docker image using a multi-stage build and non-root container execution",
+            "Kubernetes Deployment managing multiple ShopSphere Pod replicas with automatic self-healing",
+            "Horizontal Pod Autoscaler configured with 2–6 replicas and a 50% CPU utilization target",
+            "Demonstrated automatic scaling from 3 to 6 Pods under load and back down to 2 Pods after load removal",
+            "Kubernetes Service and NGINX Ingress providing stable application networking and HTTP routing",
+            "Kubernetes ConfigMap and Secret for application configuration and PostgreSQL credentials",
+            "PostgreSQL database hosted on Samsung Galaxy S25 through Termux"
+        ],
+        technologies: ["Next.js", "TypeScript", "PostgreSQL", "Docker", "Kubernetes", "Minikube", "HPA", "NGINX Ingress"],
+        repoStatus: "Source Code: Public Repository",
+        repoDesc: "The source code for ShopSphere is publicly available on GitHub. The project includes Dockerization, Kubernetes Deployment, Service, HPA, ConfigMap, Secret, and NGINX Ingress configurations, with demonstrated horizontal auto-scaling and self-healing."
+    },
     serverdeck: {
         slug: "serverdeck",
         title: "ServerDeck",
