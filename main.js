@@ -172,6 +172,26 @@ const PROJECT_CASE_STUDIES = {
         repoStatus: "Source Code: Public Repository",
         repoDesc: "The source code for ShopSphere is publicly available on GitHub. The project includes Dockerization, Kubernetes Deployment, Service, HPA, ConfigMap, Secret, and NGINX Ingress configurations, with demonstrated horizontal auto-scaling and self-healing."
     },
+    disasterrecovery: {
+        slug: "disaster-recovery-task-management",
+        title: "Disaster Recovery Task Management",
+        favicon: "src/png/main-favicon.png",
+        image: "src/webp/disaster-recovery.png",
+        imageAlt: "Disaster Recovery Task Management preview",
+        overview: "A practical Disaster Recovery project built around a Next.js Task Management application backed by PostgreSQL, demonstrating the complete DR lifecycle from automated backups and separate DR storage to controlled failure simulation and 4-second database recovery.",
+        capabilities: [
+            "Next.js single-user Task Management application with Kanban board (To Do, In Progress, Done) and PostgreSQL database persistence",
+            "Automated daily PostgreSQL logical backups using pg_dump -Fc scheduled via Linux Cron at 02:00 AM",
+            "Isolated DR backup storage at /srv/dr-storage/task-management/ with pg_restore verification and a 7-backup retention policy",
+            "Controlled application-level database failure simulation while ensuring the production database and task data remain safe",
+            "Automated restoration of the latest verified backup into an isolated task_management_dr database environment",
+            "Application failover configuration switch to the DR database with full recovered data verification (7/7 baseline tasks)",
+            "Executed end-to-end 10-stage recovery test with a measured RTO of 4 seconds and observed recovery-point gap of 122 seconds"
+        ],
+        technologies: ["Next.js", "TypeScript", "PostgreSQL", "Node.js / pg", "Bash", "Linux Cron", "pg_dump", "pg_restore"],
+        repoStatus: "Source Code: Public Repository",
+        repoDesc: "The source code for Disaster Recovery Task Management is publicly available on GitHub. The project includes the Next.js Task Management application, automated pg_dump backup scripts, Linux Cron scheduling, disaster failure simulation scripts, and end-to-end recovery verification pipelines."
+    },
     serverdeck: {
         slug: "serverdeck",
         title: "ServerDeck",
