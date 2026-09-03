@@ -172,6 +172,28 @@ const PROJECT_CASE_STUDIES = {
         repoStatus: "Source Code: Public Repository",
         repoDesc: "The source code for ShopSphere is publicly available on GitHub. The project includes Dockerization, Kubernetes Deployment, Service, HPA, ConfigMap, Secret, and NGINX Ingress configurations, with demonstrated horizontal auto-scaling and self-healing."
     },
+    featuretoggle: {
+        slug: "feature-toggle-project",
+        title: "Feature Toggle Project",
+        favicon: "src/png/main-favicon.png",
+        image: "src/webp/Feature-toggle.png",
+        imageAlt: "Feature Toggle Project preview",
+        overview: "A simple e-commerce application demonstrating the Feature Toggle pattern using OpenFeature and flagd, allowing the active checkout experience (Standard vs New) to be controlled and switched at runtime via a feature flag without rebuilding or redeploying the application.",
+        capabilities: [
+            "Implementation of the Feature Toggle architectural pattern decoupling code deployment from feature release",
+            "Next.js and TypeScript e-commerce application supporting both Standard Checkout and New Checkout experiences",
+            "OpenFeature SDK integration providing vendor-agnostic feature flag evaluation in application code",
+            "flagd feature flag engine evaluating flags dynamically from JSON configuration",
+            "Production Docker containerization and automated CI pipeline using GitHub Actions",
+            "Kubernetes and Minikube deployment with flag definitions injected via a ConfigMap",
+            "Standard Checkout experience served when the feature flag is OFF",
+            "New Checkout experience seamlessly activated when the feature flag is ON",
+            "Runtime feature switching demonstrating dynamic configuration updates without application downtime, rebuilds, or container restarts"
+        ],
+        technologies: ["Next.js", "TypeScript", "OpenFeature", "flagd", "Docker", "GitHub Actions", "Kubernetes", "Minikube"],
+        repoStatus: "Source Code: Public Repository",
+        repoDesc: "The source code for the Feature Toggle Project is publicly available on GitHub. The repository contains the Next.js application, OpenFeature SDK integration, flagd configuration, Dockerfile, Kubernetes manifests (Deployment, Service, ConfigMap), and GitHub Actions CI workflow."
+    },
     disasterrecovery: {
         slug: "disaster-recovery-task-management",
         title: "Disaster Recovery Task Management",
